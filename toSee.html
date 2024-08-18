@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Explore Malaysia - What to See</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Explore Malaysia - What to See</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
 </head>
 <body class="dark-mode"> <!-- Adding the dark-mode class to match the cs-Home theme -->
-  <header class="jumbotron jumbotron-fluid text-white text-center header-image">
-  <div class="container">
-    <h1 class="display-4">Explore Malaysia - <span id="changing-text">What to See</span></h1>
-    <p class="lead">Discover the best places to visit across Malaysia, from cultural landmarks to natural wonders.</p>
-  </div>
-</header>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg" id="navbar">
-  <div class="container">
-      <a class="navbar-brand" href="home.html" id="logo"><span>Travel</span>Lah</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span><i class="fa-solid fa-bars"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#destinations">Destinations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#activities">Activities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tips">Tips</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#plans">Plans</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html">Feedback</a>
-          </li>
-        </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="home.html" id="logo"><span>Travel</span>Lah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="toSee.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="toDo.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Tips.html">Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plan.html">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" placeholder="Search">
-          <button class="btn btn-primary" type="button">Search</button>
-        </form>
-        
-      </div>
-    </div>
-  </nav>
+    <header class="jumbotron jumbotron-fluid text-white text-center header-image">
+        <div class="container">
+            <h1 class="display-4">Explore Malaysia - <span id="changing-text">What to See</span></h1>
+            <p class="lead">Discover the best places to visit across Malaysia, from cultural landmarks to natural wonders.</p>
+        </div>
+    </header>
 
 <div class="container my-5">
   <div class="form-group">
     <label for="state-dropdown" class="text-white">Select a State:</label>
     <select class="form-control" id="state-dropdown">
-      <option value="">--Select a State--</option>
+      <option value=""> Select a state you're interested to visit! </option>
       <option value="Johor">Johor</option>
       <option value="Kedah">Kedah</option>
       <option value="Kelantan">Kelantan</option>
@@ -121,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const stateDescriptions = {
-        "Johor": "Johor is known for its beautiful beaches, including Desaru and the tropical islands of Pulau Rawa and Pulau Sibu.",
-        "Kedah": "Kedah is home to Langkawi, an archipelago of 99 islands with stunning beaches, clear waters, and duty-free shopping.",
+        "Johor": "Johor is a state in southern Malaysia linked to Singapore by causeways. Its capital - Johor Bahru, is the second-largest city in Malaysia. Johor is known for its beautiful beaches, including Desaru and the tropical islands of Pulau Rawa and Pulau Sibu.",
+        "Kedah": "Kedah is home to the famous Langkawi, an archipelago of 99 islands with stunning beaches, clear waters, and duty-free shopping.",
         "Kelantan": "Kelantan offers a rich cultural experience with traditional Malay arts, crafts, and the serene beaches of Tok Bali.",
         "Malacca": "Malacca is a UNESCO World Heritage site, renowned for its historical landmarks, museums, and vibrant cultural scene.",
         "Negeri Sembilan": "Negeri Sembilan is famous for its unique Minangkabau architecture and the beautiful Port Dickson beach.",

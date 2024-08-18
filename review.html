@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Section</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        /* Custom CSS for the reviews section */
+        .review-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+
+        .review-heading {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .review-card {
+            border: none;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-card .reviewer-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .review-card .reviewer-location {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .review-card .review-text {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .review-card .review-date {
+            font-size: 14px;
+            color: #aaa;
+            text-align: right;
+        }
+
+        .review-card .star-rating {
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .review-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="review-section">
+        <h2 class="review-heading">Traveler Reviews</h2>
+
+        <div class="container">
+            <div class="row">
+                <!-- Review Card 1 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="star-rating">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <p class="review-text">Tirta Empul is a magical place. The holy water has a calming effect, and the temple is simply beautiful.</p>
+                        <p class="reviewer-name">John Doe</p>
+                        <p class="reviewer-location">New York, USA</p>
+                        <p class="review-date">Reviewed on August 15, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="star-rating">
+                            &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                        <p class="review-text">The experience was wonderful, though the place was a bit crowded. The purification ritual is a must-do.</p>
+                        <p class="reviewer-name">Jane Smith</p>
+                        <p class="reviewer-location">Sydney, Australia</p>
+                        <p class="review-date">Reviewed on July 20, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="star-rating">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <p class="review-text">A truly spiritual experience! The temple's setting is serene, and the holy springs are mesmerizing.</p>
+                        <p class="reviewer-name">Lily Tan</p>
+                        <p class="reviewer-location">Singapore</p>
+                        <p class="review-date">Reviewed on June 10, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
