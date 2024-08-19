@@ -9,15 +9,25 @@
     font-family: "Roboto", sans-serif;
 }
 
+:root {
+    --primary-color: #f9f9f9;
+    --secondary-color: black;
+}
+
+.dark-theme {
+    --primary-color: #212121;
+    --secondary-color: #fff;
+}
+
 /* Navbar Start */
 #navbar {
-    background: #f9f9f9;
+    background: var(--primary-color);
 }
 
 #logo {
     font-size: 36px;
     font-weight: 750;
-    color: black;
+    color: var(--secondary-color);
     text-shadow: 0px 1px 1px black;
     margin-bottom: 5px;
 }
@@ -37,7 +47,7 @@
 .nav-item .nav-link {
     font-size: 16px;
     font-weight: 550;
-    color: black;
+    color: var(--secondary-color);
     letter-spacing: 1px;
     border-radius: 5px;
     transition: 0.5s ease;
@@ -45,13 +55,19 @@
 
 .nav-item .nav-link:hover {
     background: #ffa500;
-    color: white;
+    color: var(--primary-color);
 }
 
 #navbar form button {
     background: orange;
-    color: white;
+    color: var(--primary-color);
     border: none;
+}
+
+#icon {
+    width: 30px;
+    margin-left: 35px;
+    cursor: pointer;
 }
 /* Navbar End */
 
@@ -107,7 +123,7 @@
 /* Customize modal header */
 .modal-header {
     background-color: #ffa500;
-    color: white;
+    color: var(--primary-color);
 }
 
 /* Enhance button styles */
@@ -127,7 +143,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    color: white;
+    color: var(--primary-color);
     padding: 100px 0; /* Adjusts padding to center content vertically */
 }
 
@@ -163,14 +179,14 @@
 }
 
 .home .content h5 {
-    color: white;
+    color: var(--primary-color);
     font-size: 38px;
     font-weight: 200;
     text-shadow: 0px 1px 1px black;
 }
 
 .home .content h1 {
-    color: white;
+    color: var(--primary-color);
     font-size: 70px;
     font-weight: 600;
     text-shadow: 0px 1px 1px black;
@@ -199,7 +215,7 @@
 
 /* Review section styles */
 .review-section {
-    background-color: #f9f9f9;
+    background-color: var(--primary-color);
     padding: 50px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -209,12 +225,12 @@
     text-align: center;
     margin-bottom: 30px;
     font-size: 36px;
-    color: #333;
+    color: var(--secondary-color);
 }
 
 .review-card {
     border: none;
-    background: white;
+    background: var(--primary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -224,7 +240,7 @@
 .review-card .reviewer-name {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: var(--secondary-color);
 }
 
 .review-card .reviewer-location {
@@ -265,7 +281,7 @@
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #000;
+    background: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -282,13 +298,13 @@
 #blog1-preview, #blog2-preview {
     margin-bottom: 15px; 
     font-size: 16px;
-    color: #333;
+    color: var(--secondary-color);
 }
 
 /* Style for modal headers */
 .modal-header {
     background-color: #ffa500;
-    color: white;
+    color: var(--primary-color);
 }
 
 .modal-title {
@@ -312,16 +328,6 @@
     color: #ff8500;
 }
 
-/* Button styling for closing modal */
-.modal-footer .btn-secondary {
-    background-color: #333;
-    color: white;
-}
-
-.modal-footer .btn-secondary:hover {
-    background-color: #555;
-}
-
 /* Adjust button spacing */
 .btn-primary {
     margin-top: 10px;
@@ -329,7 +335,7 @@
 
 
 .home .content p {
-    color: white;
+    color: var(--primary-color);
     font-size: 15px;
     font-weight: 600;
     text-shadow: 0px 1px 1px black;
@@ -339,7 +345,7 @@
 
 .home .content a {
     padding: 10px;
-    background: white;
+    background: var(--primary-color);
     color: black;
     letter-spacing: 2px;
     font-weight: 550;
@@ -350,7 +356,7 @@
 
 .home .content a:hover {
     background: #ffa500;
-    color: white;
+    color: var(--primary-color);
 }
 @media (max-width: 850px) {
     .home {
@@ -372,7 +378,79 @@
 }
 /* Home Section End */
 
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary-color);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.changecontent::after {
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+    0% { content: "Petronas Twin Towers"; }
+    10% { content: "George Town"; }
+    20% { content: "Mount Kinabalu"; }
+    30% { content: "Langkawi Beaches"; }
+    40% { content: "Cameron Highlands"; }
+    50% { content: "Redang Island"; }
+    60% { content: "Batu Caves"; }
+    70% { content: "Gunung Mulu National Park"; }
+    80% { content: "Perhentian Islands"; }
+    90% { content: "Taman Negara"; }
+    100% { content: "Sipadan Island"; }
+}
 
 /* Footer Start */
 #footer {
@@ -429,90 +507,3 @@
     color: var(--secondary-color);
 }
 /* Footer End */
-
-
-
-
-/* Toggle switch styling */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #cccccc;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.switch-light {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.switch-dark {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-.changecontent::after {
-    content: ' ';
-    color: #ffa500;
-    text-shadow: 0px 1px 1px black;
-    animation: changetext 10s infinite linear;
-}
-
-@keyframes changetext {
-    0% { content: "Petronas Twin Towers"; }
-    10% { content: "George Town"; }
-    20% { content: "Mount Kinabalu"; }
-    30% { content: "Langkawi Beaches"; }
-    40% { content: "Cameron Highlands"; }
-    50% { content: "Redang Island"; }
-    60% { content: "Batu Caves"; }
-    70% { content: "Gunung Mulu National Park"; }
-    80% { content: "Perhentian Islands"; }
-    90% { content: "Taman Negara"; }
-    100% { content: "Sipadan Island"; }
-}

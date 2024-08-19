@@ -5,10 +5,10 @@ icon.onclick = function() {
   document.body.classList.toggle("dark-theme");
 
   if (document.body.classList.contains("dark-theme")) {
-    icon.src = "Pic/sun.png";
+    icon.src = "sun.png";
   }
   else {
-    icon.src = "./Pic/moon.png";
+    icon.src = "moon.png";
   }
 }
 

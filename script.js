@@ -1,3 +1,17 @@
+//Theme
+var icon = document.getElementById("icon");
+
+icon.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "sun.png";
+  }
+  else {
+    icon.src = "moon.png";
+  }
+}
+
 // Initialize the Leaflet map
 var map = L.map('map').setView([3.1390, 101.6869], 5); // Coordinates for Kuala Lumpur
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

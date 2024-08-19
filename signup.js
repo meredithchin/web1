@@ -5,42 +5,32 @@ icon.onclick = function() {
   document.body.classList.toggle("dark-theme");
 
   if (document.body.classList.contains("dark-theme")) {
-    icon.src = "./Pic/sun.png";
+    icon.src = "sun.png";
   }
   else {
-    icon.src = "./Pic/moon.png";
+    icon.src = "moon.png";
   }
 }
 
-document.getElementById("signupform").addEventListener("submit", function (event) {
-  event.preventDefault();
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
+document.getElementById('signupform').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
 
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+
+  // Simple validation
   if (password !== confirmPassword) {
-      alert("Passwords Do Not Match.");
+      alert("Passwords do not match!");
       return;
   }
 
-  function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-          expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-  }
+  // Here you can add additional validation or save the user info
 
-  setCookie("name", name, 7);
-  setCookie("email", email, 7);
-  setCookie("password", password, 7);
-
-  alert("Sign Up Successful");
-  window.location.href = "home.html";
-  alert("Welcome! " + name);
+  // Redirect to home page
+  window.location.href = 'home.html';
 });
 
 
